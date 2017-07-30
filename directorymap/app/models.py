@@ -27,7 +27,7 @@ class Book(models.Model):
     title = models.ForeignKey(Title)
 
     def __str__(self):
-        return "%s [%s]" % (title.title, call_number.call_number)
+        return "%s - %s [%s]" % (self.author, self.title, self.call_number)
 
 class Location(models.Model):
     location = models.CharField(max_length=50)
@@ -39,4 +39,7 @@ class Item(models.Model):
     accession_number = models.CharField(max_length=25)
     book = models.ForeignKey(Book)
     location = models.ForeignKey(Location)
+
+    def __str__(self):
+        return "%s %s %s" % (self.accession_number, self.book, self.location)
 
