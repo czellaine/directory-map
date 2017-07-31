@@ -1,1 +1,1 @@
-web: gunicorn directorymap.wsgi:application --log-file -
+web: python directorymap/manage.py runserver 0.0.0.0:$PORT
