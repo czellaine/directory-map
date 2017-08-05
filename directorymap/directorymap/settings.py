@@ -90,7 +90,7 @@ DATABASES = {
         'NAME': 'directory_map',
         'USER': 'czel',
         'PASSWORD': 'czel1234',
-        'HOST': '',
+        'HOST': 'localhost',
         'PORT': '',
     }
 }
