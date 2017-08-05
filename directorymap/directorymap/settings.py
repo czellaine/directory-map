@@ -74,14 +74,24 @@ WSGI_APPLICATION = 'directorymap.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'directory_map',
+#         'USER': 'root',
+#         'PASSWORD': 'czel1234',
+#         'HOST': 'localhost',
+#         'PORT': '3306',
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'directory_map',
-        'USER': 'root',
+        'USER': 'czel',
         'PASSWORD': 'czel1234',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'HOST': '',
+        'PORT': '',
     }
 }
 
