@@ -2,6 +2,7 @@ from django.http import JsonResponse
 from django.shortcuts import redirect, render
 from django.db.models import Q
 from django.forms.models import model_to_dict
+from django.core import serializers
 
 from app.models import Item, Location
 
@@ -31,6 +32,7 @@ def getLocation(request):
     item = Item.objects.get(accession_number__exact=acc_no)
     location = Location.objects.get(id__exact=item.location_id)
     data = {
-        'location': model_to_dict(location)
+        'location': location.location,
+        'file': location.filename.url
     }
     return JsonResponse(data)

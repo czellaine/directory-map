@@ -100,6 +100,7 @@ DATABASES = {
 }
 DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql_psycopg2'
 DATABASES['default']['NAME'] = 'd5l03m71afrdkm'
+# DATABASES['default']['NAME'] = 'directory_map'
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
@@ -140,3 +141,5 @@ USE_TZ = True
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
 STATIC_URL = '/app/static/'
+MEDIA_ROOT = BASE_DIR
+MEDIA_URL = '/locationmaps/'

@@ -7,9 +7,7 @@ $(document).ready(function() {
             },
             dataType: 'json',
             success: function(data) {
-                img_path = '/app/static/img/';
-                img = data.location.location + '.jpg';
-                $('img#location').attr('src', img_path + img)
+                $('img#location').attr('src', data.file)
             }
         });
     });
